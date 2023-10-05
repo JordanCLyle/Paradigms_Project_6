@@ -1,0 +1,50 @@
+<html>
+<title>Jordan Lyle's page</title>
+<h1>Jordan Lyle's page</h1>
+<body style="background-color:orange;">
+<div>This is my test about shiny pokemon information!</div>
+<div>Let's see how much you know about shiny pokemon!</div>
+<a href = "https://www.serebii.net/games/shiny.shtml">Press this link to learn more.</a>
+
+<h1>What are the odds of getting a shiny with Masuda method and shiny charm after X and Y?</h1>
+<div id = "answer2" onclick = "checkAnswer('answer1', true)">1 in 512</div>
+<div id = "answer3" onclick = "checkAnswer('answer1', false)">1 in 1024</div>
+<div id = "answer4" onclick = "checkAnswer('answer1', false)">1 in 4096</div>
+<div id = "answer1"></div>
+
+<h1>What shiny is a guaranteed encounter at the Lake of Rage?</h1>
+<div id = "answer5" onclick = "checkAnswer('answer8', false)">Gible</div>
+<div id = "answer6" onclick = "checkAnswer('answer8', false)">Zapdos</div>
+<div id = "answer7" onclick = "checkAnswer('answer8', true)">Gyarados</div>
+<div id = "answer8"></div>
+
+<h1>Which of these is the correct shiny for Arceus?</h1>
+<img width = 400 height = 400 id = "answer9" onclick = "checkAnswer('answer12', true)" src = "Shiny_Arceus_Yellow_Ring.png" alt = "Shiny Arceus with Yellow Ring">
+<img width = 250 height = 400 id = "answer10" onclick = "checkAnswer('answer12', false)" src = "Shiny_Arceus_Blue_Ring.png" alt = "Shiny Arceus with Blue Ring">
+<img width = 250 height = 400 id = "answer11" onclick = "checkAnswer('answer12', false)" src = "Shiny_Arceus_Green_Ring.png" alt = "Shiny Arceus with Green Ring">
+<div id = "answer12"></div>
+
+<button type="button" onclick = "resetThis()">Reset</button>
+</html>
+
+<script>
+function checkAnswer(id, choice){
+    if (choice == true)
+    {
+        document.getElementById(id).innerHTML = "Your answer is correct";
+    }
+    else if (choice == false)
+    {
+        document.getElementById(id).innerHTML = "Your answer is incorrect";
+    }
+    else
+    {
+        document.getElementById(id).innerHTML = "Your answer is undefined";
+    }
+}
+
+function resetThis()
+    {
+        window.location.reload();
+    }
+</script>
